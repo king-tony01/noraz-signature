@@ -10,7 +10,53 @@ import { Sparkles, ShieldCheck, Heart, Award, MapPin, CheckCircle2, MessageCircl
 export const metadata: Metadata = {
   title: "About the Studio & Founder | Noraz Signature",
   description:
-    "Meet Ekeh Chinenye Victory, Founder & CEO of Noraz Signature. Learn about our luxury complexion philosophy, hospital-grade hygiene, and bespoke bridal concierge.",
+    "Meet Ekeh Chinenye Victory, Founder & CEO of Noraz Signature. Discover our melanin skin philosophy, hospital-grade sanitation, and bespoke bridal concierges.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About the Studio & Founder | Noraz Signature",
+    description:
+      "Meet Ekeh Chinenye Victory, Founder & CEO of Noraz Signature. Discover our melanin skin philosophy, hospital-grade sanitation, and bespoke bridal concierges.",
+    url: "https://norazsignature.com/about",
+    siteName: "Noraz Signature",
+    images: [
+      {
+        url: "/og-about.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Noraz Signature Studio & Founder Ekeh Chinenye Victory",
+      },
+    ],
+    locale: "en_US",
+    type: "profile",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About the Studio & Founder | Noraz Signature",
+    description:
+      "Meet Ekeh Chinenye Victory, Founder & CEO of Noraz Signature. Bespoke bridal transformations and melanin skin mastery.",
+    creator: "@norazsignature",
+    images: ["/og-about.jpg"],
+  },
+};
+
+const aboutSchema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  name: "About Noraz Signature & Founder Ekeh Chinenye Victory",
+  url: "https://norazsignature.com/about",
+  mainEntity: {
+    "@type": "Person",
+    name: "Ekeh Chinenye Victory",
+    jobTitle: "Founder & Creative Director",
+    worksFor: {
+      "@type": "BeautySalon",
+      name: "Noraz Signature",
+    },
+    description:
+      "Master bridal makeup artist and educator specializing in melanin complexion harmonization, traditional wedding heritage, and modern red carpet beauty.",
+  },
 };
 
 export default function AboutPage() {
@@ -51,6 +97,10 @@ export default function AboutPage() {
 
   return (
     <main style={{ minHeight: "100vh", position: "relative" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
+      />
       <Navbar />
 
       <PageHeader

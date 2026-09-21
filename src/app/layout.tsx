@@ -29,18 +29,33 @@ export const metadata: Metadata = {
     template: "%s | Noraz Signature",
   },
   description:
-    "Bespoke professional makeup artistry specializing in luxury bridal transformations, traditional weddings, high-fashion editorial, and masterclasses for diverse skin tones.",
+    "Noraz Signature by Ekeh Chinenye Victory delivers bespoke bridal transformations, royal traditional ceremonies, editorial campaigns, and masterclasses across Lagos and international destinations.",
   keywords: [
     "Noraz Signature",
-    "Luxury Bridal Makeup",
+    "Ekeh Chinenye Victory",
+    "Luxury Bridal Makeup Lagos",
     "African Wedding Makeup Artist",
-    "Editorial Makeup Artist",
-    "Melanated Skin Specialist",
-    "Bridal Glamour",
-    "Celebrity Makeup Artist",
-    "Masterclass Makeup Coaching",
+    "Traditional Nigerian Bridal Beauty",
+    "Editorial Makeup Artist Lagos",
+    "Melanin Complexion Specialist",
+    "Destination Wedding Makeup Artist",
+    "Bespoke Bridal Suite Lagos",
+    "Lekki Victoria Island Makeup Artist",
   ],
-  authors: [{ name: "Ekeh Chinenye Victory" }, { name: "Noraz Signature" }],
+  authors: [
+    { name: "Ekeh Chinenye Victory", url: "https://norazsignature.com" },
+    { name: "Noraz Signature" },
+  ],
+  creator: "Ekeh Chinenye Victory",
+  publisher: "Noraz Signature",
+  formatDetection: {
+    email: true,
+    address: true,
+    telephone: true,
+  },
+  alternates: {
+    canonical: "/",
+  },
   manifest: "/site.webmanifest",
   icons: {
     icon: [
@@ -65,20 +80,84 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Noraz Signature | Luxury Bridal & Editorial Makeup Artistry",
     description:
-      "Timeless glamour, flawless complexion matching, and luxury bridal concierges crafted for your most memorable moments.",
+      "Bespoke bridal concierges, flawless skin matching, and high-fashion artistry by Ekeh Chinenye Victory.",
     url: "https://norazsignature.com",
     siteName: "Noraz Signature",
+    locale: "en_US",
+    type: "website",
     images: [
       {
-        url: "/android-chrome-512x512.png",
-        width: 512,
-        height: 512,
-        alt: "Noraz Signature Monogram",
+        url: "/og-home.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Noraz Signature - Bespoke Luxury Bridal & Editorial Artistry",
       },
     ],
-    type: "website",
-    locale: "en_US",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Noraz Signature | Luxury Bridal & Editorial Makeup Artistry",
+    description:
+      "Bespoke bridal concierges, flawless skin matching, and high-fashion artistry by Ekeh Chinenye Victory.",
+    creator: "@norazsignature",
+    images: ["/og-home.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  name: "Noraz Signature",
+  image: "https://norazsignature.com/og-home.jpg",
+  founder: {
+    "@type": "Person",
+    name: "Ekeh Chinenye Victory",
+    jobTitle: "Founder & Lead Artistry Director",
+    url: "https://norazsignature.com/about",
+  },
+  telephone: "+2347086833653",
+  priceRange: "$$$",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Victoria Island & Lekki Phase 1",
+    addressLocality: "Lagos",
+    addressRegion: "Lagos State",
+    addressCountry: "NG",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 6.4281,
+    longitude: 3.4219,
+  },
+  url: "https://norazsignature.com",
+  sameAs: ["https://instagram.com/noraz_signature"],
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+      ],
+      opens: "07:00",
+      closes: "20:00",
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -88,6 +167,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${playfair.variable} ${montserrat.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
       <body>{children}</body>
     </html>
   );

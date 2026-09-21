@@ -11,11 +11,56 @@ export const metadata: Metadata = {
   title: "Haute Artistry Lookbook & Portfolio | Noraz Signature",
   description:
     "View our bespoke bridal lookbook featuring Traditional Nigerian weddings, luxury white bridal suites, red carpet beauty, and interactive before & after transformations.",
+  alternates: {
+    canonical: "/lookbook",
+  },
+  openGraph: {
+    title: "Haute Artistry Lookbook & Portfolio | Noraz Signature",
+    description:
+      "Explore real brides, royal traditional ceremonies, and high-fashion editorial masterstrokes crafted across Lagos and worldwide destinations.",
+    url: "https://norazsignature.com/lookbook",
+    siteName: "Noraz Signature",
+    images: [
+      {
+        url: "/og-lookbook.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Noraz Signature Haute Bridal Lookbook & Portfolio",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Haute Artistry Lookbook & Portfolio | Noraz Signature",
+    description:
+      "Curated bridal transformations and royal traditional wedding beauty portfolio by Noraz Signature.",
+    creator: "@norazsignature",
+    images: ["/og-lookbook.jpg"],
+  },
+};
+
+const lookbookSchema = {
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  name: "Noraz Signature Bridal & Editorial Lookbook",
+  description:
+    "A curated gallery of luxury bridal transformations, Nigerian traditional ceremonies, and high-fashion editorial artistry.",
+  url: "https://norazsignature.com/lookbook",
+  author: {
+    "@type": "Person",
+    name: "Ekeh Chinenye Victory",
+  },
 };
 
 export default function LookbookPage() {
   return (
     <main style={{ minHeight: "100vh", position: "relative" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(lookbookSchema) }}
+      />
       <Navbar />
 
       <PageHeader

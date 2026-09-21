@@ -8,9 +8,51 @@ import { Footer } from "@/components/Footer";
 import { Sparkles, BookOpen, Clock, Calendar, CheckCircle2, MessageCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "The Editorial Beauty Journal | Noraz Signature",
+  title: "The Editorial Beauty Journal & Bridal Prep Guide | Noraz Signature",
   description:
     "Expert bridal beauty advice, skincare prep roadmaps, humidity lock techniques, and wedding day morning timelines curated by Noraz Signature.",
+  alternates: {
+    canonical: "/journal",
+  },
+  openGraph: {
+    title: "The Editorial Beauty Journal & Bridal Prep Guide | Noraz Signature",
+    description:
+      "Masterclass insights, bridal skincare architectures, humidity-defying techniques, and day-of timelines by Ekeh Chinenye Victory.",
+    url: "https://norazsignature.com/journal",
+    siteName: "Noraz Signature",
+    images: [
+      {
+        url: "/og-journal.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Noraz Signature Editorial Beauty Journal & Bridal Prep Guide",
+      },
+    ],
+    locale: "en_US",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Editorial Beauty Journal & Bridal Prep Guide | Noraz Signature",
+    description:
+      "Expert bridal beauty advice, skincare prep roadmaps, and wedding day timelines.",
+    creator: "@norazsignature",
+    images: ["/og-journal.jpg"],
+  },
+};
+
+const journalSchema = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  name: "Noraz Signature Editorial Beauty Journal",
+  description:
+    "Masterclass beauty advice, bridal skincare prep roadmaps, and humidity longevity techniques.",
+  url: "https://norazsignature.com/journal",
+  publisher: {
+    "@type": "BeautySalon",
+    name: "Noraz Signature",
+    image: "https://norazsignature.com/og-journal.jpg",
+  },
 };
 
 export default function JournalPage() {
@@ -44,6 +86,10 @@ export default function JournalPage() {
 
   return (
     <main style={{ minHeight: "100vh", position: "relative" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(journalSchema) }}
+      />
       <Navbar />
 
       <PageHeader

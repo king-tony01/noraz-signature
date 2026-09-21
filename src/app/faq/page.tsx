@@ -11,11 +11,74 @@ export const metadata: Metadata = {
   title: "Frequently Asked Questions & Policies | Noraz Signature",
   description:
     "Get clear answers on retainers, bridal trial scheduling, worldwide travel logistics, sanitation standards, and wedding morning timelines at Noraz Signature.",
+  alternates: {
+    canonical: "/faq",
+  },
+  openGraph: {
+    title: "Frequently Asked Questions & Policies | Noraz Signature",
+    description:
+      "Clear, transparent answers regarding retainer deposits, bridal trials, worldwide travel logistics, and sanitation standards.",
+    url: "https://norazsignature.com/faq",
+    siteName: "Noraz Signature",
+    images: [
+      {
+        url: "/og-faq.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Noraz Signature Frequently Asked Questions & Studio Policies",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Frequently Asked Questions & Policies | Noraz Signature",
+    description:
+      "Clear answers on bridal reservations, retainers, destination travel, and sanitation standards.",
+    creator: "@norazsignature",
+    images: ["/og-faq.jpg"],
+  },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How far in advance should I secure my wedding date?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We recommend reserving 6 to 12 months in advance, especially for peak wedding seasons (October through January). Dates are secured strictly upon receipt of a signed contract and non-refundable retainer deposit.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you travel internationally for destination weddings?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Noraz Signature regularly travels across Nigeria, Africa, the United Kingdom, Europe, North America, and the Caribbean for destination ceremonies. Custom destination quotes include return flights, secure transfers, and hotel accommodations.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is a bridal preview or trial session mandatory?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "While not legally mandatory, a bridal preview is strongly encouraged. It allows us to analyze your undertone, skin type, dress neckline, and veil placement, ensuring a relaxed, seamless wedding morning.",
+      },
+    },
+  ],
 };
 
 export default function FAQPage() {
   return (
     <main style={{ minHeight: "100vh", position: "relative" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Navbar />
 
       <PageHeader

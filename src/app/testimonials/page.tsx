@@ -12,6 +12,49 @@ export const metadata: Metadata = {
   title: "Client Testimonials & Real Bride Reviews | Noraz Signature",
   description:
     "Read 5-star verified reviews and bride stories from real weddings, luxury traditional ceremonies, and editorial sessions styled by Noraz Signature.",
+  alternates: {
+    canonical: "/testimonials",
+  },
+  openGraph: {
+    title: "Client Testimonials & Real Bride Reviews | Noraz Signature",
+    description:
+      "Cherished words, verified 5-star experiences, and glowing bridal stories from Noraz Signature brides across the globe.",
+    url: "https://norazsignature.com/testimonials",
+    siteName: "Noraz Signature",
+    images: [
+      {
+        url: "/og-testimonials.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Noraz Signature Client Love and 5-Star Reviews",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Client Testimonials & Real Bride Reviews | Noraz Signature",
+    description:
+      "Over 500+ brides and VIPs styled with a 4.99★ average rating. Read real wedding reviews.",
+    creator: "@norazsignature",
+    images: ["/og-testimonials.jpg"],
+  },
+};
+
+const testimonialsSchema = {
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  name: "Noraz Signature Reviews",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.99",
+    reviewCount: "500",
+    bestRating: "5",
+    worstRating: "1",
+  },
+  image: "https://norazsignature.com/og-testimonials.jpg",
+  url: "https://norazsignature.com/testimonials",
 };
 
 export default function TestimonialsPage() {
@@ -24,6 +67,10 @@ export default function TestimonialsPage() {
 
   return (
     <main style={{ minHeight: "100vh", position: "relative" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(testimonialsSchema) }}
+      />
       <Navbar />
 
       <PageHeader

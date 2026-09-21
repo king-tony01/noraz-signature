@@ -12,6 +12,78 @@ export const metadata: Metadata = {
   title: "Bespoke Services & Bridal Packages | Noraz Signature",
   description:
     "Explore luxury makeup artistry packages: The Royal Bridal Suite, Traditional African Weddings, Red Carpet Glam, Editorial Campaigns, and VIP Masterclasses.",
+  alternates: {
+    canonical: "/services",
+  },
+  openGraph: {
+    title: "Bespoke Services & Bridal Packages | Noraz Signature",
+    description:
+      "Explore luxury makeup artistry packages: The Royal Bridal Suite, Traditional African Weddings, Red Carpet Glam, Editorial Campaigns, and VIP Masterclasses.",
+    url: "https://norazsignature.com/services",
+    siteName: "Noraz Signature",
+    images: [
+      {
+        url: "/og-services.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Noraz Signature Bespoke Artistry Suites & Bridal Packages",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bespoke Services & Bridal Packages | Noraz Signature",
+    description:
+      "Luxury bridal artistry, traditional ceremonies, and editorial glam by Noraz Signature.",
+    creator: "@norazsignature",
+    images: ["/og-services.jpg"],
+  },
+};
+
+const servicesSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Bespoke Bridal & Editorial Makeup Artistry",
+  provider: {
+    "@type": "BeautySalon",
+    name: "Noraz Signature",
+    image: "https://norazsignature.com/og-services.jpg",
+    telephone: "+2347086833653",
+    url: "https://norazsignature.com",
+  },
+  areaServed: ["Lagos", "Nigeria", "United Kingdom", "Worldwide"],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Noraz Signature Artistry Packages",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "The Royal Bridal Experience",
+          description: "Complete luxury wedding day makeup with skin prep and VIP touch-up kit.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Traditional Regal African Wedding",
+          description: "Vibrant pigmentation, gele styling alignment, and waterproof endurance.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Red Carpet & Gala Evening Glam",
+          description: "Sculpted bone structure and red carpet lighting camera-ready finish.",
+        },
+      },
+    ],
+  },
 };
 
 export default function ServicesPage() {
@@ -67,6 +139,10 @@ export default function ServicesPage() {
 
   return (
     <main style={{ minHeight: "100vh", position: "relative" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
+      />
       <Navbar />
 
       <PageHeader
