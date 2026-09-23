@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { portfolioItems, beforeAfterShowcase, PortfolioItem } from "@/data/portfolioData";
-import { Sparkles, Eye, X, Sliders, ArrowUpRight, Check, ChevronRight } from "lucide-react";
+import { Sparkles, Eye, X, Sliders, ArrowUpRight, Check, ChevronRight, MessageCircle, Calendar } from "lucide-react";
 
 const InstagramIcon: React.FC<{ size?: number }> = ({ size = 16 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -500,95 +500,199 @@ export const Portfolio: React.FC = () => {
           style={{
             position: "fixed",
             inset: 0,
-            background: "rgba(15, 12, 11, 0.95)",
+            background: "rgba(12, 9, 8, 0.94)",
+            backdropFilter: "blur(12px)",
+            WebkitBackdropFilter: "blur(12px)",
             zIndex: 100,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            padding: "1.5rem",
+            padding: "1rem",
           }}
           onClick={() => setSelectedItem(null)}
         >
           <div
+            className="portfolio-modal-dialog"
             style={{
-              maxWidth: "850px",
-              width: "100%",
               background: "#241A18",
               border: "1px solid var(--color-brand-champagne)",
               borderRadius: "0px",
-              overflow: "hidden",
-              position: "relative",
-              display: "grid",
-              gridTemplateColumns: "1fr",
               boxShadow: "none",
+              position: "relative",
+              overflow: "hidden",
             }}
-            className="modal-grid"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close button */}
             <button
               onClick={() => setSelectedItem(null)}
+              aria-label="Close dialog"
               style={{
                 position: "absolute",
-                top: "1rem",
-                right: "1rem",
-                background: "rgba(0,0,0,0.8)",
-                border: "1px solid rgba(216,190,138,0.5)",
+                top: "1.1rem",
+                right: "1.1rem",
+                background: "rgba(20, 14, 13, 0.85)",
+                border: "1px solid rgba(216, 190, 138, 0.6)",
                 color: "#F8F4EE",
                 borderRadius: "50%",
-                width: "36px",
-                height: "36px",
+                width: "38px",
+                height: "38px",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 cursor: "pointer",
-                zIndex: 10,
+                zIndex: 30,
+                transition: "all 0.2s ease",
               }}
             >
               <X size={18} />
             </button>
 
-            {/* Modal Image */}
-            <div style={{ aspectRatio: "4/5", maxHeight: "500px", overflow: "hidden" }}>
+            {/* Left Column: Media Display */}
+            <div className="portfolio-modal-media">
               <img
                 src={selectedItem.image}
                 alt={selectedItem.title}
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  display: "block",
+                }}
+              />
+              {/* Subtle Luxury Gradient Overlay */}
+              <div
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  background: "linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(36, 26, 24, 0.7) 100%)",
+                  pointerEvents: "none",
+                }}
               />
             </div>
 
-            {/* Modal Content */}
-            <div style={{ padding: "2rem", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+            {/* Right Column: Title, Info, Artistry & CTAs */}
+            <div className="portfolio-modal-content">
               <div>
-                <span className="badge-dark">{selectedItem.tag}</span>
-                <h3 className="font-serif" style={{ fontSize: "1.8rem", color: "#F8F4EE", marginTop: "0.75rem", marginBottom: "0.5rem" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", flexWrap: "wrap", marginBottom: "0.85rem" }}>
+                  <span className="badge-dark">{selectedItem.tag}</span>
+                  <span
+                    style={{
+                      fontSize: "0.6875rem",
+                      textTransform: "uppercase",
+                      letterSpacing: "0.12em",
+                      color: "var(--color-brand-champagne)",
+                      fontWeight: 600,
+                      padding: "0.2rem 0.5rem",
+                      border: "1px solid rgba(216, 190, 138, 0.3)",
+                    }}
+                  >
+                    {selectedItem.category}
+                  </span>
+                </div>
+
+                <h3
+                  className="font-serif"
+                  style={{
+                    fontSize: "clamp(1.5rem, 2.3vw, 2rem)",
+                    color: "#F8F4EE",
+                    lineHeight: 1.2,
+                    marginBottom: "1rem",
+                    fontWeight: 500,
+                  }}
+                >
                   {selectedItem.title}
                 </h3>
-                <p style={{ color: "#C9A18D", fontSize: "0.9375rem", lineHeight: "1.6", marginBottom: "1.25rem" }}>
+
+                <div style={{ height: "1px", background: "rgba(216, 190, 138, 0.2)", marginBottom: "1.2rem" }} />
+
+                <p style={{ color: "#C9A18D", fontSize: "0.9375rem", lineHeight: "1.7", marginBottom: "1.5rem" }}>
                   {selectedItem.description}
                 </p>
 
-                <p style={{ fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.12em", color: "var(--color-brand-champagne)", fontWeight: 600, marginBottom: "0.5rem" }}>
-                  Key Artistry Features:
+                <p
+                  style={{
+                    fontSize: "0.75rem",
+                    textTransform: "uppercase",
+                    letterSpacing: "0.12em",
+                    color: "var(--color-brand-champagne)",
+                    fontWeight: 600,
+                    marginBottom: "0.65rem",
+                  }}
+                >
+                  Key Artistry Focus & Details:
                 </p>
-                <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem" }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
                   {selectedItem.details.map((d, i) => (
-                    <div key={i} style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "0.8125rem", color: "#E5DCD3" }}>
-                      <Check size={12} color="var(--color-brand-champagne)" />
+                    <div
+                      key={i}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "0.65rem",
+                        fontSize: "0.875rem",
+                        color: "#E5DCD3",
+                      }}
+                    >
+                      <div
+                        style={{
+                          width: "20px",
+                          height: "20px",
+                          borderRadius: "50%",
+                          background: "rgba(216, 190, 138, 0.15)",
+                          border: "1px solid rgba(216, 190, 138, 0.4)",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          flexShrink: 0,
+                        }}
+                      >
+                        <Check size={11} color="var(--color-brand-champagne)" />
+                      </div>
                       <span>{d}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div style={{ marginTop: "2rem" }}>
+              {/* Bottom Action Area */}
+              <div style={{ marginTop: "2rem", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
                 <a
-                  href="#contact"
-                  onClick={() => setSelectedItem(null)}
+                  href={`https://wa.me/2347086833653?text=${encodeURIComponent(`Hi Noraz Signature, I am admiring your lookbook and would like to inquire about booking the "${selectedItem.title}" look.`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn-champagne"
-                  style={{ width: "100%", justifyContent: "center", borderRadius: "0px", boxShadow: "none" }}
+                  style={{
+                    width: "100%",
+                    justifyContent: "center",
+                    borderRadius: "0px",
+                    boxShadow: "none",
+                    padding: "0.85rem 1.25rem",
+                    fontSize: "0.875rem",
+                  }}
                 >
-                  Inquire For This Look
+                  <MessageCircle size={16} />
+                  <span>Inquire for This Look on WhatsApp</span>
+                </a>
+
+                <a
+                  href="/book"
+                  onClick={() => setSelectedItem(null)}
+                  className="btn-secondary"
+                  style={{
+                    width: "100%",
+                    justifyContent: "center",
+                    borderRadius: "0px",
+                    boxShadow: "none",
+                    padding: "0.85rem 1.25rem",
+                    fontSize: "0.875rem",
+                    border: "1px solid rgba(216, 190, 138, 0.4)",
+                    color: "#F8F4EE",
+                    background: "transparent",
+                  }}
+                >
+                  <Calendar size={15} color="var(--color-brand-champagne)" />
+                  <span>Reserve Your VIP Date</span>
                 </a>
               </div>
             </div>
@@ -597,14 +701,61 @@ export const Portfolio: React.FC = () => {
       )}
 
       <style jsx>{`
-        @media (min-width: 860px) {
+        /* Desktop & Tablet Dual Display (768px and up) */
+        @media (min-width: 768px) {
           .ba-grid {
             grid-template-columns: 1fr 1fr !important;
           }
-          .modal-grid {
-            grid-template-columns: 1.1fr 0.9fr !important;
+          .portfolio-modal-dialog {
+            display: grid !important;
+            grid-template-columns: 1.15fr 0.85fr !important;
+            max-width: 1060px !important;
+            width: 92vw !important;
+            max-height: 88vh !important;
+            height: 84vh !important;
+          }
+          .portfolio-modal-media {
+            position: relative !important;
+            height: 100% !important;
+            min-height: 520px !important;
+            overflow: hidden !important;
+            background: #140E0D !important;
+          }
+          .portfolio-modal-content {
+            padding: 2.75rem 2.25rem !important;
+            overflow-y: auto !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justifyContent: space-between !important;
           }
         }
+
+        /* Mobile Stacked Display (< 768px) */
+        @media (max-width: 767px) {
+          .portfolio-modal-dialog {
+            display: flex !important;
+            flex-direction: column !important;
+            width: 100% !important;
+            max-width: 480px !important;
+            max-height: 90vh !important;
+            overflow-y: auto !important;
+          }
+          .portfolio-modal-media {
+            position: relative !important;
+            width: 100% !important;
+            aspect-ratio: 4/5 !important;
+            max-height: 380px !important;
+            overflow: hidden !important;
+            flex-shrink: 0 !important;
+          }
+          .portfolio-modal-content {
+            padding: 1.75rem 1.25rem !important;
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 1.5rem !important;
+          }
+        }
+
         .gallery-img:hover {
           transform: scale(1.05);
         }
