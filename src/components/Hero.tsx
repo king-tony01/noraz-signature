@@ -202,8 +202,8 @@ export const Hero: React.FC<HeroProps> = ({ onBookClick, onExploreClick }) => {
                 }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=85"
-                  alt="Noraz Signature Bridal Makeup"
+                  src="/portfolio/bold-royal-blue-smokey-wing.jpg"
+                  alt="Noraz Signature - Bold Royal Blue & Smokey Winged Glam"
                   style={{
                     width: "100%",
                     height: "100%",
@@ -243,7 +243,7 @@ export const Hero: React.FC<HeroProps> = ({ onBookClick, onExploreClick }) => {
                       fontWeight: 600,
                     }}
                   >
-                    Signature Bridal Look
+                    Haute Artistry Signature
                   </p>
                   <h3
                     className="font-serif"
@@ -253,7 +253,7 @@ export const Hero: React.FC<HeroProps> = ({ onBookClick, onExploreClick }) => {
                       fontWeight: 500,
                     }}
                   >
-                    The Luminous Golden Hour Bride
+                    Bold Royal Blue & Smokey Winged Glam
                   </h3>
                 </div>
               </div>
