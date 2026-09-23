@@ -66,13 +66,13 @@ export const portfolioItems: PortfolioItem[] = [
     details: ["Vibrant Magenta Cut-Crease", "Precision Winged Liner", "Polished Architectural Brows", "High-Contrast Melanin Glow"]
   },
   {
-    id: "look-6",
-    title: "Ethereal Destination Bride",
+    id: "soft-bridal-tiara-elegance",
+    title: "Soft Bridal Glam & Tiara Elegance",
     category: "Bridal",
-    tag: "Outdoor Coastal Ceremony",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1000&q=80",
-    description: "Humidity-defying coastal bridal look featuring airy lashes, soft flushed cheeks, and pillowy satin lips.",
-    details: ["UV-Resistant Primer", "Airbrush Finish", "18-Hour Coastal Hold"]
+    tag: "Classic White Bridal",
+    image: "/portfolio/soft-bridal-tiara-elegance.jpg",
+    description: "A timeless bridal look featuring soft neutral eyeshadow, gentle blush and a natural glow, paired with a classic lace gown, floral bouquet and sparkling tiara.",
+    details: ["Soft Neutral Eyeshadow", "Gentle Radiant Blush", "Skin-First Bridal Complexion", "Tiara & Lace Gown Pairing"]
   }
 ];
 
