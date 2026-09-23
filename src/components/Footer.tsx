@@ -116,7 +116,6 @@ export const Footer: React.FC = () => {
                 { label: "Services & Pricing", href: "/services" },
                 { label: "High-Artistry Lookbook", href: "/lookbook" },
                 { label: "Interactive Price Estimator", href: "/pricing" },
-                { label: "Client Testimonials", href: "/testimonials" },
                 { label: "Bridal Preparation Journal", href: "/journal" },
                 { label: "Frequently Asked Questions", href: "/faq" },
                 { label: "VIP Date Reservation", href: "/book" },

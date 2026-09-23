@@ -32,7 +32,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookClick }) => {
     { label: "Services", href: "/services" },
     { label: "Lookbook", href: "/lookbook" },
     { label: "Price Estimator", href: "/pricing" },
-    { label: "Testimonials", href: "/testimonials" },
     { label: "Bridal Journal", href: "/journal" },
     { label: "FAQ", href: "/faq" },
   ];
