@@ -99,7 +99,7 @@ export const metadata: Metadata = {
     title: "Noraz Signature | Luxury Bridal & Editorial Makeup Artistry",
     description:
       "Bespoke bridal concierges, flawless skin matching, and high-fashion artistry by Ekeh Chinenye Victory.",
-    creator: "@norazsignature",
+    creator: "@noraz_signature",
     images: ["/og-home.jpg"],
   },
   robots: {
@@ -141,7 +141,7 @@ const structuredData = {
     longitude: 3.4219,
   },
   url: "https://norazsignature.com",
-  sameAs: ["https://instagram.com/noraz_signature"],
+  sameAs: ["https://www.instagram.com/noraz_signature/"],
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",

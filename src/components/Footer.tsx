@@ -56,7 +56,7 @@ export const Footer: React.FC = () => {
             </p>
             <div style={{ display: "flex", gap: "0.75rem", marginTop: "0.5rem" }}>
               {[
-                { icon: InstagramIcon, href: "https://instagram.com", label: "Instagram" },
+                { icon: InstagramIcon, href: "https://www.instagram.com/noraz_signature/", label: "Instagram" },
                 { icon: MessageCircle, href: "https://wa.me/2347086833653", label: "WhatsApp" },
                 { icon: Mail, href: "mailto:concierge@norazsignature.com", label: "Email" },
               ].map((social, i) => {

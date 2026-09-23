@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: "Bespoke Services & Bridal Packages | Noraz Signature",
     description:
       "Luxury bridal artistry, traditional ceremonies, and editorial glam by Noraz Signature.",
-    creator: "@norazsignature",
+    creator: "@noraz_signature",
     images: ["/og-services.jpg"],
   },
 };

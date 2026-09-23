@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Bespoke Bridal Suite Investment & Estimator | Noraz Signature",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: "Bespoke Bridal Suite Investment & Estimator | Noraz Signature",
     description:
       "Interactive bridal makeup calculator and transparent pricing for luxury Nigerian and destination weddings.",
-    creator: "@norazsignature",
+    creator: "@noraz_signature",
     images: ["/og-pricing.jpg"],
   },
 };

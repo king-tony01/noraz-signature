@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Reserve Your VIP Bridal Suite Date | Noraz Signature",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: "Reserve Your VIP Bridal Suite Date | Noraz Signature",
     description:
       "Secure your wedding date or luxury editorial session with Ekeh Chinenye Victory.",
-    creator: "@norazsignature",
+    creator: "@noraz_signature",
     images: ["/og-book.jpg"],
   },
 };

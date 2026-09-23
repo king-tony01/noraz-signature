@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "The Editorial Beauty Journal & Bridal Prep Guide | Noraz Signature",
     description:
       "Expert bridal beauty advice, skincare prep roadmaps, and wedding day timelines.",
-    creator: "@norazsignature",
+    creator: "@noraz_signature",
     images: ["/og-journal.jpg"],
   },
 };

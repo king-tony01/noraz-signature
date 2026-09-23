@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "Haute Artistry Lookbook & Portfolio | Noraz Signature",
     description:
       "Curated bridal transformations and royal traditional wedding beauty portfolio by Noraz Signature.",
-    creator: "@norazsignature",
+    creator: "@noraz_signature",
     images: ["/og-lookbook.jpg"],
   },
 };

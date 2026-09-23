@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: "Client Testimonials & Real Bride Reviews | Noraz Signature",
     description:
       "Over 500+ brides and VIPs styled with a 4.99★ average rating. Read real wedding reviews.",
-    creator: "@norazsignature",
+    creator: "@noraz_signature",
     images: ["/og-testimonials.jpg"],
   },
 };

@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "Frequently Asked Questions & Policies | Noraz Signature",
     description:
       "Clear answers on bridal reservations, retainers, destination travel, and sanitation standards.",
-    creator: "@norazsignature",
+    creator: "@noraz_signature",
     images: ["/og-faq.jpg"],
   },
 };

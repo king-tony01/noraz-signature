@@ -477,7 +477,7 @@ export const Portfolio: React.FC = () => {
             Want to see daily backstage reels, live trials, and bridal reveals?
           </p>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/noraz_signature/"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-champagne"
@@ -488,7 +488,7 @@ export const Portfolio: React.FC = () => {
             }}
           >
             <InstagramIcon size={16} />
-            <span>Follow @norazsignature on Instagram</span>
+            <span>Follow @noraz_signature on Instagram</span>
             <ArrowUpRight size={14} />
           </a>
         </div>
