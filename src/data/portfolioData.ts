@@ -39,13 +39,13 @@ export const portfolioItems: PortfolioItem[] = [
     details: ["Rose-Style Gold Gele Architecture", "Warm Defined Eyeshadow", "Subtle Berry Lip Palette", "Royal Purple Attire Harmony"]
   },
   {
-    id: "look-3",
-    title: "High-Fashion Glass Skin & Bronze",
+    id: "soft-pink-sculpted-brows",
+    title: "Soft Pink & Sculpted Brows",
     category: "Editorial",
-    tag: "Vogue Runway Editorial",
-    image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1000&q=80",
-    description: "Ultra-clean skin finish with feather-light bronzed sculpting and wet-look gloss accents.",
-    details: ["Zero Flashback", "Dewy Micro-Glow", "Minimalist Perfection"]
+    tag: "Soft Matte Pastel Eyes",
+    image: "/portfolio/soft-pink-sculpted-brows.jpg",
+    description: "A refined close-up highlight featuring delicate pastel pink eye shadow, precisely shaped eyebrows, and a natural pink lip with a radiant finish.",
+    details: ["Delicate Pastel Pink Eyeshadow", "Micro-Sculpted Eyebrows", "Natural Pink Satin Lip", "Dewy Skin Complexion"]
   },
   {
     id: "look-4",
