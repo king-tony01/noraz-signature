@@ -30,13 +30,13 @@ export const portfolioItems: PortfolioItem[] = [
     details: ["Subtle Smoky Eyes", "Glossy Nude Lips", "Warm Toned Complexion", "Emerald Satin Robe Styling"]
   },
   {
-    id: "look-2",
-    title: "Regal Yoruba Royal Elegance",
+    id: "majestic-gold-gele-purple",
+    title: "Majestic Gold Gele & Royal Purple Glam",
     category: "Traditional",
-    tag: "Traditional Wedding",
-    image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=1000&q=80",
-    description: "Vibrant coral undertone balancing, sculpted cheekbones, and high-shine copper glaze for cultural splendor.",
-    details: ["Aso-Oke Tone Harmony", "Sculpted Brows", "24hr Sweat Defense"]
+    tag: "Gold Gele & Royal Purple",
+    image: "/portfolio/majestic-gold-gele-purple.jpg",
+    description: "A vibrant traditional celebration look showcasing a rose-style structured gold Gele, warm defined eyeshadow, and a subtle berry lip that matches rich purple embroidered attire.",
+    details: ["Rose-Style Gold Gele Architecture", "Warm Defined Eyeshadow", "Subtle Berry Lip Palette", "Royal Purple Attire Harmony"]
   },
   {
     id: "look-3",
