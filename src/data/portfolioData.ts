@@ -109,6 +109,15 @@ export const portfolioItems: PortfolioItem[] = [
     image: "/portfolio/bold-royal-blue-smokey-wing.jpg",
     description: "A striking portrait featuring crisp winged eyeliner, soft brown crease eyeshadow and a subtle metallic sheen on the lips, stunningly framed against a rich warm backdrop and an electric blue top.",
     details: ["Crisp Sculpted Winged Eyeliner", "Soft Brown Crease Dimension", "Subtle Metallic Lip Sheen", "High-Contrast Melanin Glow"]
+  },
+  {
+    id: "black-rose-gele-classic-nude",
+    title: "Black Rose Gele & Classic Nude Glam",
+    category: "Traditional",
+    tag: "Black Rose Gele Styling",
+    image: "/portfolio/black-rose-gele-classic-nude.jpg",
+    description: "A refined traditional look showcasing a rose-draped black Gele headwrap paired with flawless soft skin finish, defined brows and an elegant warm brown nude lip.",
+    details: ["Rose-Draped Black Gele Architecture", "Warm Brown Nude Lip Contour", "Flawless Soft Velvet Skin", "Ankara & Lace Ensemble Harmony"]
   }
 ];
 
