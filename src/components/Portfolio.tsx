@@ -497,68 +497,27 @@ export const Portfolio: React.FC = () => {
       {/* Fullscreen Lightbox Modal */}
       {selectedItem && (
         <div
-          style={{
-            position: "fixed",
-            inset: 0,
-            background: "rgba(12, 9, 8, 0.94)",
-            backdropFilter: "blur(12px)",
-            WebkitBackdropFilter: "blur(12px)",
-            zIndex: 100,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: "1rem",
-          }}
+          className="portfolio-modal-backdrop"
           onClick={() => setSelectedItem(null)}
         >
           <div
             className="portfolio-modal-dialog"
-            style={{
-              background: "#241A18",
-              border: "1px solid var(--color-brand-champagne)",
-              borderRadius: "0px",
-              boxShadow: "none",
-              position: "relative",
-              overflow: "hidden",
-            }}
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close button */}
+            {/* Dedicated Lightbox Close Button */}
             <button
               onClick={() => setSelectedItem(null)}
-              aria-label="Close dialog"
-              style={{
-                position: "absolute",
-                top: "1.1rem",
-                right: "1.1rem",
-                background: "rgba(20, 14, 13, 0.85)",
-                border: "1px solid rgba(216, 190, 138, 0.6)",
-                color: "#F8F4EE",
-                borderRadius: "50%",
-                width: "38px",
-                height: "38px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                cursor: "pointer",
-                zIndex: 30,
-                transition: "all 0.2s ease",
-              }}
+              aria-label="Close preview modal"
+              className="portfolio-modal-close-btn"
             >
-              <X size={18} />
+              <X size={20} />
             </button>
 
-            {/* Left Column: Media Display */}
+            {/* Left Column (Desktop/Tablet) / Top (Mobile): Media Display */}
             <div className="portfolio-modal-media">
               <img
                 src={selectedItem.image}
                 alt={selectedItem.title}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  display: "block",
-                }}
               />
               {/* Subtle Luxury Gradient Overlay */}
               <div
@@ -571,7 +530,7 @@ export const Portfolio: React.FC = () => {
               />
             </div>
 
-            {/* Right Column: Title, Info, Artistry & CTAs */}
+            {/* Right Column (Desktop/Tablet) / Bottom (Mobile): Title, Info, Artistry & CTAs */}
             <div className="portfolio-modal-content">
               <div>
                 <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", flexWrap: "wrap", marginBottom: "0.85rem" }}>
@@ -699,67 +658,6 @@ export const Portfolio: React.FC = () => {
           </div>
         </div>
       )}
-
-      <style jsx>{`
-        /* Desktop & Tablet Dual Display (768px and up) */
-        @media (min-width: 768px) {
-          .ba-grid {
-            grid-template-columns: 1fr 1fr !important;
-          }
-          .portfolio-modal-dialog {
-            display: grid !important;
-            grid-template-columns: 1.15fr 0.85fr !important;
-            max-width: 1060px !important;
-            width: 92vw !important;
-            max-height: 88vh !important;
-            height: 84vh !important;
-          }
-          .portfolio-modal-media {
-            position: relative !important;
-            height: 100% !important;
-            min-height: 520px !important;
-            overflow: hidden !important;
-            background: #140E0D !important;
-          }
-          .portfolio-modal-content {
-            padding: 2.75rem 2.25rem !important;
-            overflow-y: auto !important;
-            display: flex !important;
-            flex-direction: column !important;
-            justifyContent: space-between !important;
-          }
-        }
-
-        /* Mobile Stacked Display (< 768px) */
-        @media (max-width: 767px) {
-          .portfolio-modal-dialog {
-            display: flex !important;
-            flex-direction: column !important;
-            width: 100% !important;
-            max-width: 480px !important;
-            max-height: 90vh !important;
-            overflow-y: auto !important;
-          }
-          .portfolio-modal-media {
-            position: relative !important;
-            width: 100% !important;
-            aspect-ratio: 4/5 !important;
-            max-height: 380px !important;
-            overflow: hidden !important;
-            flex-shrink: 0 !important;
-          }
-          .portfolio-modal-content {
-            padding: 1.75rem 1.25rem !important;
-            display: flex !important;
-            flex-direction: column !important;
-            gap: 1.5rem !important;
-          }
-        }
-
-        .gallery-img:hover {
-          transform: scale(1.05);
-        }
-      `}</style>
     </section>
   );
 };
