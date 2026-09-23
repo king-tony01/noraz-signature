@@ -48,13 +48,13 @@ export const portfolioItems: PortfolioItem[] = [
     details: ["Delicate Pastel Pink Eyeshadow", "Micro-Sculpted Eyebrows", "Natural Pink Satin Lip", "Dewy Skin Complexion"]
   },
   {
-    id: "look-4",
-    title: "Velvet Siren Red Carpet Glam",
+    id: "golden-shimmer-radiant-smile",
+    title: "Golden Shimmer Eyes & Radiant Smile",
     category: "Soft Glam",
-    tag: "Celebrity Gala",
-    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1000&q=80",
-    description: "Rich cocoa contouring paired with a timeless deep burgundy velvet lip and razor-sharp feline wing.",
-    details: ["Precision Lip Arch", "Smoked Liner", "Anti-Shine Micro Powder"]
+    tag: "Radiant Golden Glam",
+    image: "/portfolio/golden-shimmer-radiant-smile.jpg",
+    description: "A bright, cheerful look featuring gold glitter eye shadow, dramatic fluttery lashes, rosy cheeks, and a high-shine nude gloss.",
+    details: ["Gold Shimmer Eyelid Foil", "Dramatic Fluttery Lashes", "Warm Rosy Cheek Flush", "High-Shine Nude Gloss"]
   },
   {
     id: "look-5",
