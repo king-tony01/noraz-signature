@@ -91,6 +91,15 @@ export const portfolioItems: PortfolioItem[] = [
     image: "/portfolio/soft-winged-dusky-rose.jpg",
     description: "A warm and radiant portrait showcasing classic winged eyeliner, soft dusty-rose blush and glossy lips framed nicely by a dark headscarf.",
     details: ["Classic Soft Winged Eyeliner", "Dusky Rose Cheek Dimension", "High-Gloss Radiant Lip", "Luminous Velvet Base"]
+  },
+  {
+    id: "luminous-gold-high-shine-gloss",
+    title: "Luminous Gold Lid & High-Shine Gloss",
+    category: "Editorial",
+    tag: "Luminous Gold Editorial",
+    image: "/portfolio/luminous-gold-high-shine-gloss.jpg",
+    description: "A warm, glowing portrait featuring subtle gold shimmer lids, clean winged eyeliner, flawless skin finish and a rich nude lip gloss with sleek straight hair.",
+    details: ["Subtle Gold Shimmer Lids", "Clean Winged Eyeliner", "Flawless Skin Finish", "High-Shine Nude Gloss"]
   }
 ];
 
