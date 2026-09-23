@@ -21,13 +21,13 @@ export interface BeforeAfterPair {
 
 export const portfolioItems: PortfolioItem[] = [
   {
-    id: "look-1",
-    title: "Radiant Golden Hour Bride",
-    category: "Bridal",
-    tag: "White Wedding Couture",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1000&q=80",
-    description: "Luminous, velvet-matte base with custom champagne eyelid foil and soft ombre nude lips.",
-    details: ["Hydrating Gold Base", "Custom Lash Cluster", "Tear-Proof Setting System"]
+    id: "emerald-silk-glam",
+    title: "Emerald Elegance & Soft Warm Glam",
+    category: "Soft Glam",
+    tag: "Emerald Silk Glam",
+    image: "/portfolio/emerald-silk-glam.jpg",
+    description: "A polished, soft-glam makeup look featuring subtle smoky eyes, glowing skin, and warm nude-glossed lips, perfectly complemented by a rich emerald green satin robe.",
+    details: ["Subtle Smoky Eyes", "Glossy Nude Lips", "Warm Toned Complexion", "Emerald Satin Robe Styling"]
   },
   {
     id: "look-2",
