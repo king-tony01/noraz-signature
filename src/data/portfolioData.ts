@@ -118,6 +118,15 @@ export const portfolioItems: PortfolioItem[] = [
     image: "/portfolio/black-rose-gele-classic-nude.jpg",
     description: "A refined traditional look showcasing a rose-draped black Gele headwrap paired with flawless soft skin finish, defined brows and an elegant warm brown nude lip.",
     details: ["Rose-Draped Black Gele Architecture", "Warm Brown Nude Lip Contour", "Flawless Soft Velvet Skin", "Ankara & Lace Ensemble Harmony"]
+  },
+  {
+    id: "vibrant-coral-slicked-back",
+    title: "Vibrant Coral Eye & Slicked-Back Elegance",
+    category: "Editorial",
+    tag: "Vibrant Coral Editorial",
+    image: "/portfolio/vibrant-coral-slicked-back.jpg",
+    description: "A chic angled profile featuring vibrant coral-pink eyeshadow, precise black winged liner, crisp edges and a polished glossy lip.",
+    details: ["Vibrant Coral-Pink Cut-Crease", "Crisp Black Winged Eyeliner", "Slicked-Back Hair Edge Detailing", "Glossy Bronzed Nude Lip"]
   }
 ];
 
