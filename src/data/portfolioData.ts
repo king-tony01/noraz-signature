@@ -100,6 +100,15 @@ export const portfolioItems: PortfolioItem[] = [
     image: "/portfolio/luminous-gold-high-shine-gloss.jpg",
     description: "A warm, glowing portrait featuring subtle gold shimmer lids, clean winged eyeliner, flawless skin finish and a rich nude lip gloss with sleek straight hair.",
     details: ["Subtle Gold Shimmer Lids", "Clean Winged Eyeliner", "Flawless Skin Finish", "High-Shine Nude Gloss"]
+  },
+  {
+    id: "bold-royal-blue-smokey-wing",
+    title: "Bold Royal Blue & Smokey Winged Glam",
+    category: "Editorial",
+    tag: "High-Fashion Statement",
+    image: "/portfolio/bold-royal-blue-smokey-wing.jpg",
+    description: "A striking portrait featuring crisp winged eyeliner, soft brown crease eyeshadow and a subtle metallic sheen on the lips, stunningly framed against a rich warm backdrop and an electric blue top.",
+    details: ["Crisp Sculpted Winged Eyeliner", "Soft Brown Crease Dimension", "Subtle Metallic Lip Sheen", "High-Contrast Melanin Glow"]
   }
 ];
 
