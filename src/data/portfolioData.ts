@@ -127,6 +127,15 @@ export const portfolioItems: PortfolioItem[] = [
     image: "/portfolio/vibrant-coral-slicked-back.jpg",
     description: "A chic angled profile featuring vibrant coral-pink eyeshadow, precise black winged liner, crisp edges and a polished glossy lip.",
     details: ["Vibrant Coral-Pink Cut-Crease", "Crisp Black Winged Eyeliner", "Slicked-Back Hair Edge Detailing", "Glossy Bronzed Nude Lip"]
+  },
+  {
+    id: "radiant-graduation-group-glam",
+    title: "Radiant Graduation Glam & Group Portrait",
+    category: "Soft Glam",
+    tag: "Milestone & Group Glam",
+    image: "/portfolio/radiant-graduation-group-glam.jpg",
+    description: "A group photoshoot capturing three graduates in matching burnt-orange attire featuring soft warm eyeshadow, flawless base makeup and gentle nude lips.",
+    details: ["Harmonized Group Complexion Matching", "Warm Terracotta & Orange Tonal Palette", "Camera-Ready Matte-Glow Finish", "Gentle Nude Lip Accents"]
   }
 ];
 
