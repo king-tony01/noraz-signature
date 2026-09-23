@@ -82,6 +82,15 @@ export const portfolioItems: PortfolioItem[] = [
     image: "/portfolio/warm-sunset-ombre-lip.jpg",
     description: "A soft-focused, symmetrical portrait displaying warm orange-gold shimmer eyeshadow, seamless face sculpting and a defined nude-pink ombré lip.",
     details: ["Warm Orange-Gold Shimmer Lid", "Defined Nude-Pink Ombré Lip", "Seamless Cheekbone Sculpting", "Symmetrical Brow Architecture"]
+  },
+  {
+    id: "soft-winged-dusky-rose",
+    title: "Soft Winged Eye & Dusky Rose Blush",
+    category: "Soft Glam",
+    tag: "Modest Elegance Glam",
+    image: "/portfolio/soft-winged-dusky-rose.jpg",
+    description: "A warm and radiant portrait showcasing classic winged eyeliner, soft dusty-rose blush and glossy lips framed nicely by a dark headscarf.",
+    details: ["Classic Soft Winged Eyeliner", "Dusky Rose Cheek Dimension", "High-Gloss Radiant Lip", "Luminous Velvet Base"]
   }
 ];
 
