@@ -57,13 +57,13 @@ export const portfolioItems: PortfolioItem[] = [
     details: ["Gold Shimmer Eyelid Foil", "Dramatic Fluttery Lashes", "Warm Rosy Cheek Flush", "High-Shine Nude Gloss"]
   },
   {
-    id: "look-5",
-    title: "Sun-Drenched Monochromatic Nude",
-    category: "Soft Glam",
-    tag: "Milestone Glamour",
-    image: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=1000&q=80",
-    description: "Seamless transitions of warm terracotta, soft espresso, and peach tones for effortless sophistication.",
-    details: ["Neutral Terracotta Eyes", "Cloud Skin Texture", "Custom Nude Blend"]
+    id: "magenta-high-curly-bun",
+    title: "Pop of Magenta & High Curly Bun",
+    category: "Editorial",
+    tag: "Edgy Magenta Editorial",
+    image: "/portfolio/magenta-high-curly-bun.jpg",
+    description: "A chic, high-contrast look highlighting vibrant magenta eyeshadow, winged liner, and polished brows paired with an elegant textured updo bun.",
+    details: ["Vibrant Magenta Cut-Crease", "Precision Winged Liner", "Polished Architectural Brows", "High-Contrast Melanin Glow"]
   },
   {
     id: "look-6",
