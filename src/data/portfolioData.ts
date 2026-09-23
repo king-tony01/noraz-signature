@@ -73,6 +73,15 @@ export const portfolioItems: PortfolioItem[] = [
     image: "/portfolio/soft-bridal-tiara-elegance.jpg",
     description: "A timeless bridal look featuring soft neutral eyeshadow, gentle blush and a natural glow, paired with a classic lace gown, floral bouquet and sparkling tiara.",
     details: ["Soft Neutral Eyeshadow", "Gentle Radiant Blush", "Skin-First Bridal Complexion", "Tiara & Lace Gown Pairing"]
+  },
+  {
+    id: "warm-sunset-ombre-lip",
+    title: "Warm Sunset Lid & Ombré Lip",
+    category: "Soft Glam",
+    tag: "Sunset Shimmer Glam",
+    image: "/portfolio/warm-sunset-ombre-lip.jpg",
+    description: "A soft-focused, symmetrical portrait displaying warm orange-gold shimmer eyeshadow, seamless face sculpting and a defined nude-pink ombré lip.",
+    details: ["Warm Orange-Gold Shimmer Lid", "Defined Nude-Pink Ombré Lip", "Seamless Cheekbone Sculpting", "Symmetrical Brow Architecture"]
   }
 ];
 
