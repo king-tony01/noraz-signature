@@ -488,7 +488,7 @@ export const Portfolio: React.FC = () => {
             }}
           >
             <InstagramIcon size={16} />
-            <span>Follow @noraz_signature on Instagram</span>
+            <span>Follow us on Instagram</span>
             <ArrowUpRight size={14} />
           </a>
         </div>
