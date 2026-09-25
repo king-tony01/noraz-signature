@@ -420,11 +420,11 @@ Looking forward to hearing from you!`;
                   style={{ width: "100%", padding: "1.1rem", fontSize: "0.9375rem", justifyContent: "center" }}
                 >
                   {isSubmitting ? (
-                    <span>Submitting Inquiry...</span>
+                    <span>Submitting...</span>
                   ) : (
                     <>
                       <Calendar size={16} color="var(--color-brand-champagne)" />
-                      <span>Submit Official Booking Inquiry</span>
+                      <span>Submit booking</span>
                       <ArrowRight size={16} color="var(--color-brand-champagne)" />
                     </>
                   )}

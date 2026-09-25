@@ -70,19 +70,10 @@ Please let me know if my requested date is available!`;
   };
 
   return (
-    <section
-      id="estimator"
-      style={{
-        background: "var(--color-surface)",
-        padding: "6.5rem 1.5rem",
-        borderTop: "1px solid var(--color-border)",
-        borderBottom: "1px solid var(--color-border)",
-        position: "relative",
-      }}
-    >
-      <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
+    <section id="estimator" className="estimator-section">
+      <div className="estimator-inner">
         {/* Section Header */}
-        <div style={{ textAlign: "center", maxWidth: "700px", margin: "0 auto 3.5rem auto" }}>
+        <div className="estimator-header">
           <span className="badge-gold">
             <Calculator size={12} color="var(--color-brand-espresso)" />
             Transparent Investment Estimator
@@ -104,20 +95,8 @@ Please let me know if my requested date is available!`;
           </p>
         </div>
 
-        {/* Main Calculator Grid */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr",
-            gap: "2.5rem",
-            background: "var(--color-white)",
-            border: "1px solid var(--color-border)",
-            borderRadius: "0px",
-            padding: "2.5rem",
-            boxShadow: "none",
-          }}
-          className="calc-container"
-        >
+        {/* Main Calculator Grid (White Container) */}
+        <div className="calc-container">
           {/* Left Column: Form Controls */}
           <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
             {/* Step 1: Base Service */}
@@ -474,14 +453,6 @@ Please let me know if my requested date is available!`;
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @media (min-width: 900px) {
-          .calc-container {
-            grid-template-columns: 1.25fr 0.95fr !important;
-          }
-        }
-      `}</style>
     </section>
   );
 };

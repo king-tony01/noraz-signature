@@ -15,7 +15,7 @@ import { Footer } from "@/components/Footer";
 import { MessageCircle, ArrowUp } from "lucide-react";
 
 export default function Home() {
-  const [selectedServiceForBooking, setSelectedServiceForBooking] = useState<string>("The Royal Bridal Suite");
+  const [selectedServiceForBooking, setSelectedServiceForBooking] = useState<string>("Bridal Makeup");
   const [bookingNotes, setBookingNotes] = useState<string>("");
 
   const scrollToSection = (id: string) => {
