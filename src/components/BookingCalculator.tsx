@@ -434,7 +434,7 @@ Please let me know if my requested date is available!`;
                 style={{ width: "100%", justifyContent: "center", borderRadius: "0px", boxShadow: "none" }}
               >
                 <MessageCircle size={16} />
-                <span>Send Estimate via WhatsApp</span>
+                <span>Send via WhatsApp</span>
               </a>
 
               <button
