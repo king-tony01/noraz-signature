@@ -22,8 +22,16 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : "https://norazsignature.com");
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://norazsignature.com"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Noraz Signature | Luxury Bridal & Editorial Makeup Artistry",
     template: "%s | Noraz Signature",
@@ -43,7 +51,7 @@ export const metadata: Metadata = {
     "Lekki Victoria Island Makeup Artist",
   ],
   authors: [
-    { name: "Ekeh Chinenye Victory", url: "https://norazsignature.com" },
+    { name: "Ekeh Chinenye Victory", url: siteUrl },
     { name: "Noraz Signature" },
   ],
   creator: "Ekeh Chinenye Victory",
@@ -81,15 +89,17 @@ export const metadata: Metadata = {
     title: "Noraz Signature | Luxury Bridal & Editorial Makeup Artistry",
     description:
       "Bespoke bridal concierges, flawless skin matching, and high-fashion artistry by Ekeh Chinenye Victory.",
-    url: "https://norazsignature.com",
+    url: siteUrl,
     siteName: "Noraz Signature",
     locale: "en_US",
     type: "website",
     images: [
       {
         url: "/og-home.jpg",
+        secureUrl: "/og-home.jpg",
         width: 1200,
         height: 630,
+        type: "image/jpeg",
         alt: "Noraz Signature - Bespoke Luxury Bridal & Editorial Artistry",
       },
     ],

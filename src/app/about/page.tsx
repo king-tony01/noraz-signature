@@ -18,13 +18,15 @@ export const metadata: Metadata = {
     title: "About the Studio & Founder | Noraz Signature",
     description:
       "Meet Ekeh Chinenye Victory, Founder & CEO of Noraz Signature. Discover our melanin skin philosophy, hospital-grade sanitation, and bespoke bridal concierges.",
-    url: "https://norazsignature.com/about",
+    url: "/about",
     siteName: "Noraz Signature",
     images: [
       {
         url: "/og-about.jpg",
+        secureUrl: "/og-about.jpg",
         width: 1200,
         height: 630,
+        type: "image/jpeg",
         alt: "Noraz Signature Studio & Founder Ekeh Chinenye Victory",
       },
     ],

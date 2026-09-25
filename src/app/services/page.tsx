@@ -19,13 +19,15 @@ export const metadata: Metadata = {
     title: "Bespoke Services & Bridal Packages | Noraz Signature",
     description:
       "Explore luxury makeup artistry packages: The Royal Bridal Suite, Traditional African Weddings, Red Carpet Glam, Editorial Campaigns, and VIP Masterclasses.",
-    url: "https://norazsignature.com/services",
+    url: "/services",
     siteName: "Noraz Signature",
     images: [
       {
         url: "/og-services.jpg",
+        secureUrl: "/og-services.jpg",
         width: 1200,
         height: 630,
+        type: "image/jpeg",
         alt: "Noraz Signature Bespoke Artistry Suites & Bridal Packages",
       },
     ],

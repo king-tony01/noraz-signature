@@ -18,13 +18,15 @@ export const metadata: Metadata = {
     title: "Frequently Asked Questions & Policies | Noraz Signature",
     description:
       "Clear, transparent answers regarding retainer deposits, bridal trials, worldwide travel logistics, and sanitation standards.",
-    url: "https://norazsignature.com/faq",
+    url: "/faq",
     siteName: "Noraz Signature",
     images: [
       {
         url: "/og-faq.jpg",
+        secureUrl: "/og-faq.jpg",
         width: 1200,
         height: 630,
+        type: "image/jpeg",
         alt: "Noraz Signature Frequently Asked Questions & Studio Policies",
       },
     ],

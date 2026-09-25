@@ -11,13 +11,15 @@ export const metadata: Metadata = {
     title: "Reserve Your VIP Bridal Suite Date | Noraz Signature",
     description:
       "Reserve your date with Noraz Signature. Secure VIP bridal suites, destination wedding concierges, and private editorial sessions.",
-    url: "https://norazsignature.com/book",
+    url: "/book",
     siteName: "Noraz Signature",
     images: [
       {
         url: "/og-book.jpg",
+        secureUrl: "/og-book.jpg",
         width: 1200,
         height: 630,
+        type: "image/jpeg",
         alt: "Noraz Signature VIP Bridal Suite Booking & Date Reservation",
       },
     ],

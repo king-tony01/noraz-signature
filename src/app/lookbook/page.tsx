@@ -18,13 +18,15 @@ export const metadata: Metadata = {
     title: "Haute Artistry Lookbook & Portfolio | Noraz Signature",
     description:
       "Explore real brides, royal traditional ceremonies, and high-fashion editorial masterstrokes crafted across Lagos and worldwide destinations.",
-    url: "https://norazsignature.com/lookbook",
+    url: "/lookbook",
     siteName: "Noraz Signature",
     images: [
       {
         url: "/og-lookbook.jpg",
+        secureUrl: "/og-lookbook.jpg",
         width: 1200,
         height: 630,
+        type: "image/jpeg",
         alt: "Noraz Signature Haute Bridal Lookbook & Portfolio",
       },
     ],

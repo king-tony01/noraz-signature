@@ -11,13 +11,15 @@ export const metadata: Metadata = {
     title: "Bespoke Bridal Suite Investment & Estimator | Noraz Signature",
     description:
       "Calculate your luxury wedding day beauty investment with real-time estimates for bridal suites, entourage glam, and VIP touch-ups.",
-    url: "https://norazsignature.com/pricing",
+    url: "/pricing",
     siteName: "Noraz Signature",
     images: [
       {
         url: "/og-pricing.jpg",
+        secureUrl: "/og-pricing.jpg",
         width: 1200,
         height: 630,
+        type: "image/jpeg",
         alt: "Noraz Signature Luxury Bridal Investment & Suite Estimator",
       },
     ],

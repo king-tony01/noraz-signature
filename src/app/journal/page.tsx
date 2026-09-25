@@ -18,13 +18,15 @@ export const metadata: Metadata = {
     title: "The Editorial Beauty Journal & Bridal Prep Guide | Noraz Signature",
     description:
       "Masterclass insights, bridal skincare architectures, humidity-defying techniques, and day-of timelines by Ekeh Chinenye Victory.",
-    url: "https://norazsignature.com/journal",
+    url: "/journal",
     siteName: "Noraz Signature",
     images: [
       {
         url: "/og-journal.jpg",
+        secureUrl: "/og-journal.jpg",
         width: 1200,
         height: 630,
+        type: "image/jpeg",
         alt: "Noraz Signature Editorial Beauty Journal & Bridal Prep Guide",
       },
     ],
