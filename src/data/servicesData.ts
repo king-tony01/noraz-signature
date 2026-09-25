@@ -2,146 +2,215 @@ export interface ServiceTier {
   id: string;
   name: string;
   tagline: string;
-  category: "bridal" | "glam" | "editorial" | "masterclass";
-  price: string;
-  duration: string;
+  category: "bridal" | "glam" | "editorial" | "styling" | "concierge" | "masterclass" | "events";
   isPopular?: boolean;
   features: string[];
   idealFor: string;
 }
 
-export interface ServiceAddon {
+export interface FutureService {
   id: string;
   name: string;
-  price: number;
-  description: string;
-  duration: string;
+  tagline: string;
+  category: "hair" | "bridal-hair" | "wig-styling";
+  badge?: string;
+  features: string[];
 }
 
 export const servicesData: ServiceTier[] = [
   {
-    id: "bridal-couture",
-    name: "The Royal Bridal Suite",
-    tagline: "Our premier signature experience for your once-in-a-lifetime walk down the aisle.",
-    category: "bridal",
-    price: "$650",
-    duration: "3.5 Hours (Includes Trial)",
-    isPopular: true,
-    idealFor: "Modern & Luxury Brides seeking perfection, transfer-proof wear, and zero stress.",
-    features: [
-      "Dedicated 90-minute Pre-Wedding Trial & Look Design",
-      "Hydrating Luxury 24k Gold Skincare Prep & Lip Therapy",
-      "Bespoke Tone-Matched Complexion & Sculpting",
-      "Custom Hand-Mink Lash Mapping & Precision Brow Arching",
-      "16-Hour Transfer-Resistant & Cry-Proof Setting Seal",
-      "Deluxe Bridal Touch-up Emergency Kit Included",
-      "Veil & Jewelry Placement Support On-Location"
-    ]
-  },
-  {
-    id: "traditional-splendor",
-    name: "Traditional & Cultural Elegance",
-    tagline: "Vibrant, regal cultural bridal artistry crafted for rich ceremonies and heavy jewelry.",
-    category: "bridal",
-    price: "$550",
-    duration: "2.5 Hours",
-    idealFor: "Yoruba, Igbo, Edo, Hausa, Ghanaian, and multicultural cultural celebrations.",
-    features: [
-      "Sweat-resistant, high-humidity HD Velvet Base Formulation",
-      "Vibrant Eye Artistry tailored to attire colors and fabrics",
-      "High-Definition Brow & Lip Architecture",
-      "Long-Wear Collarbone & Shoulder Body Shimmer",
-      "Gele / Cultural Headgear Coordination & Placement",
-      "Full Touch-Up Powder & Lip Glaze Set Included"
-    ]
-  },
-  {
-    id: "red-carpet-glam",
-    name: "Signature Red Carpet & Gala",
-    tagline: "High-voltage glamour engineered for gala lights, flashes, and unforgettable entries.",
+    id: "signature-glam",
+    name: "Signature Glam",
+    tagline: "Elegant, polished glam designed for special occasions, celebrations and unforgettable moments.",
     category: "glam",
-    price: "$220",
-    duration: "90 Minutes",
-    idealFor: "Galas, Award Shows, Milestones, Birthdays, and VIP Red Carpet Events.",
+    idealFor: "Milestone birthdays, gala dinners, wedding guests, dinners, and VIP evening outings.",
     features: [
-      "Illuminating Skin Polish & Poreless Base Perfecting",
-      "Choice of Smoked Velvet, Hollywood Wing, or Soft Glam",
-      "Dimensional Highlight & Contour for Flash Photography",
-      "Luxury 3D Multi-Layered False Eyelashes",
-      "Hydrating Gloss or Matte Velvet Lip Chemistry",
-      "Setting Spray Mist with 12-Hour Anti-Shine Lock"
+      "Skin prep & poreless, weightless complexion balancing",
+      "Custom eye artistry tailored to your style (Smokey, Soft Wing, or Neutral Shimmer)",
+      "Defined brow architecture and luxury mink false lashes",
+      "High-shine gloss or velvet matte lip perfection",
+      "12-hour transfer-resistant setting lock"
     ]
   },
   {
-    id: "editorial-commercial",
-    name: "Editorial & High-Fashion Campaign",
-    tagline: "Studio and runway-grade makeup execution designed for high-resolution 8K capture.",
+    id: "bridal-makeup",
+    name: "Bridal Makeup",
+    tagline: "Flawless, long-lasting bridal glam carefully tailored to your features and wedding aesthetic.",
+    category: "bridal",
+    isPopular: true,
+    idealFor: "White wedding ceremonies, luxury destination brides, and romantic reception transitions.",
+    features: [
+      "Deluxe hydrating skincare prep & 24k gold lip therapy",
+      "Bespoke tone-matched HD complexion with waterproof cry-proof seal",
+      "Hand-mapped flutter lashes and soft romantic eye dimension",
+      "Complimentary bridal touch-up kit for day-long perfection",
+      "Veil, crown and jewelry placement assistance on-site"
+    ]
+  },
+  {
+    id: "traditional-bridal-makeup",
+    name: "Traditional Bridal Makeup",
+    tagline: "Timeless bridal beauty designed to complement your traditional attire, accessories and gele.",
+    category: "bridal",
+    idealFor: "Yoruba, Igbo, Edo, Hausa, Ghanaian, and multicultural traditional wedding rites.",
+    features: [
+      "High-humidity & sweat-resistant velvet base formulation",
+      "Rich, vibrant eye look harmonious with your coral beads & traditional attire",
+      "High-definition sculpted brows and bold or nude lip pairing",
+      "Collarbone & decolletage radiance shimmer",
+      "Seamless aesthetic coordination with Gele & royal accessories"
+    ]
+  },
+  {
+    id: "gele-styling",
+    name: "Gele Styling",
+    tagline: "Beautifully structured gele styling created to complete your overall look.",
+    category: "styling",
+    idealFor: "Brides, celebrants, mothers of the couple, and traditional wedding guests.",
+    features: [
+      "Classic Avant-Garde, Rose, Fan, Auto-Gele, and Infinity Pleat styles",
+      "Precision pleating & structural balance for all-day comfort",
+      "Custom fit tailored to your face shape and outfit silhouette",
+      "Crown and accessory pinning support",
+      "Quick on-site tying and touch-up standby"
+    ]
+  },
+  {
+    id: "bridal-party-makeup",
+    name: "Bridal Party Makeup",
+    tagline: "Coordinated and elegant glam for bridesmaids, mothers and members of the bridal party.",
+    category: "bridal",
+    idealFor: "Maids of Honor, bridesmaids, mothers of the bride/groom, and sisters.",
+    features: [
+      "Harmonious glam matching the bride's overarching wedding color palette",
+      "Skin-perfecting satin base with long-wear durability",
+      "Flattering neutral soft glam eyes with wispy lashes",
+      "Hydrating lip gloss or long-wear matte stain",
+      "Rapid, synchronized morning timeline execution"
+    ]
+  },
+  {
+    id: "photoshoot-editorial-makeup",
+    name: "Photoshoot & Editorial Makeup",
+    tagline: "Camera-ready beauty tailored to your creative concept, photoshoot or editorial project.",
     category: "editorial",
-    price: "$850 / Half-Day",
-    duration: "Half-Day / Full-Day On-Set",
-    idealFor: "Lookbooks, Magazine Covers, Commercial Video, and Designer Runway Shows.",
+    idealFor: "Studio portraits, fashion lookbooks, magazine editorials, pregnancy shoots, and brand campaigns.",
     features: [
-      "Flawless Glass Skin and Texture-True Complexion Matching",
-      "Zero-Flashback Formulations calibrated for studio strobes",
-      "Continuous On-Set Standby for Look Changes & Touch-ups",
-      "Creative Concept Collaboration with Creative Directors",
-      "Male Grooming & Multi-Model Adaptability",
-      "Fast Runway Turnaround Protocols"
+      "8K Ultra-HD camera-ready finish with zero flashback",
+      "Creative moodboard alignment and concept execution",
+      "Precision contouring calibrated for studio flash and natural daylight",
+      "Texture-true skin finish with editorial glow",
+      "On-set touch-up standby for wardrobe and look transitions"
     ]
   },
   {
-    id: "masterclass-pro",
-    name: "1-on-1 VIP Artistry Masterclass",
-    tagline: "Private mentorship to master complex undertones, flawless blending, and business mastery.",
-    category: "masterclass",
-    price: "$450",
-    duration: "4.5 Hours",
-    idealFor: "Aspiring makeup artists and beauty lovers wanting pro-level mastery.",
+    id: "home-service",
+    name: "Home Service",
+    tagline: "A personalised beauty experience delivered at your preferred location.",
+    category: "concierge",
+    idealFor: "Clients desiring total privacy, comfort, and convenience at home, hotel, or private venue.",
     features: [
-      "In-Depth Undertone & Color Theory for Melanated Complexions",
-      "Brush Anatomy, Product Chemistry & Lighting Calibration",
-      "Hands-On Live Model Practice with Noraz Mentorship",
-      "Social Media Photography, Lighting & Client Booking Tactics",
-      "Comprehensive Noraz Signature Product Guide & Resource List",
-      "Official Certificate of Completion & Gift Bag"
+      "Complete professional studio setup brought directly to your doorstep",
+      "Hospital-grade sanitized tools and luxury cosmetic kit",
+      "Zero travel stress — relax in your own private sanctuary",
+      "Flexible scheduling including early morning or evening call-times",
+      "Personalized consultation and one-on-one undivided artistry"
+    ]
+  },
+  {
+    id: "makeup-lessons",
+    name: "Makeup Lessons",
+    tagline: "Personalised one-on-one sessions designed to help you master your makeup routine and techniques.",
+    category: "masterclass",
+    idealFor: "Beginners wanting a daily routine or beauty enthusiasts elevating their techniques.",
+    features: [
+      "Personal beauty audit: reviewing your current makeup bag & tools",
+      "Hands-on demonstration: 'Half-Face' step-by-step guided practice",
+      "Flawless brow shaping, blending, and skin-matching fundamentals",
+      "Day-to-night transformation tips and product shopping checklist",
+      "Personalized step-by-step recap guide to take home"
+    ]
+  },
+  {
+    id: "group-event-bookings",
+    name: "Group & Event Bookings",
+    tagline: "Customised beauty services for weddings, celebrations, events and group occasions.",
+    category: "events",
+    idealFor: "Large wedding entourages, corporate galas, birthday squads, and festive group gatherings.",
+    features: [
+      "Dedicated artistry schedule and coordinated multi-seat glams",
+      "Unified, cohesive glam quality across the entire party",
+      "Custom group pricing and VIP group concierge packages",
+      "On-location travel setup with zero downtime between glams",
+      "Group touch-up station prior to departure or ceremony"
     ]
   }
 ];
 
-export const addonOptions: ServiceAddon[] = [
+export const futureServicesData: FutureService[] = [
   {
-    id: "bridal-party",
-    name: "Bridesmaid / Mother of Bride Glam",
-    price: 150,
-    description: "Full soft glam including lashes & touch-up powder per attendee.",
-    duration: "45 mins per person"
+    id: "wig-ventilation",
+    name: "Wig Ventilation",
+    tagline: "Natural-looking wig ventilation for a seamless and realistic finish.",
+    category: "hair",
+    badge: "Coming Soon",
+    features: [
+      "Precision single/double knot hair ventilation",
+      "Custom hairline customization and density blending",
+      "HD and Swiss lace foundation compatibility",
+      "Seamless natural transition with realistic scalp look"
+    ]
   },
   {
-    id: "extended-touchup",
-    name: "Full-Day On-Site Touch-up Concierge",
-    price: 300,
-    description: "Dedicated artist standby through ceremony, photo session & reception change.",
-    duration: "Up to 5 hours"
+    id: "wigging",
+    name: "Wigging",
+    tagline: "Custom wig creation tailored to your preferred style and fit.",
+    category: "hair",
+    badge: "Coming Soon",
+    features: [
+      "Bespoke head measurement and cap structuring",
+      "Secure sewing and machine-stitched durability",
+      "Custom styling, layers, and partings tailored to your face",
+      "Premium texture matching (Straight, Wavy, Curls)"
+    ]
   },
   {
-    id: "second-look",
-    name: "Reception Glam Transformation (Second Look)",
-    price: 180,
-    description: "Transition from soft daytime bridal to sultry evening party glam.",
-    duration: "45 mins"
+    id: "wig-revamping",
+    name: "Wig Revamping & Styling",
+    tagline: "Professional restoration and styling to give your existing wigs a fresh new look.",
+    category: "wig-styling",
+    badge: "Coming Soon",
+    features: [
+      "Deep cleansing, intense conditioning and silicone treatment",
+      "Lace cleaning, detangling, and frizz elimination",
+      "Precision cutting, trimming, hot comb styling and curling",
+      "Revitalized bounce, silky sheen and extended longevity"
+    ]
   },
   {
-    id: "airbrush-upgrade",
-    name: "Airbrush HD Complexion Upgrade",
-    price: 75,
-    description: "Ultra-fine micro-mist application for featherweight, 24-hour waterproof base.",
-    duration: "+15 mins"
+    id: "frontal-installation",
+    name: "Frontal Installation",
+    tagline: "Neat and seamless frontal installation for a natural-looking finish.",
+    category: "hair",
+    badge: "Coming Soon",
+    features: [
+      "Expert lace bleaching and customized plucking",
+      "Skin-melt tint matching for undetectable scalp look",
+      "Sweat-resistant, long-wear adhesive or glueless install",
+      "Clean edges, baby hair customization or sleek flat press"
+    ]
   },
   {
-    id: "early-bird",
-    name: "Early Morning Call-Time (Before 6:00 AM)",
-    price: 100,
-    description: "Accommodates early ceremonies, church call times, and photo schedules.",
-    duration: "Fixed"
+    id: "bridal-hairstyling",
+    name: "Bridal Hairstyling",
+    tagline: "Elegant bridal hairstyles designed to complement your makeup, gown and overall bridal look.",
+    category: "bridal-hair",
+    badge: "Coming Soon",
+    features: [
+      "Classic Hollywood waves, sleek chignons, textured updos & pony glam",
+      "Harmonious pairing with veil, tiara, and hair accessories",
+      "High-humidity anti-frizz hold for all-day ceremony endurance",
+      "Seamless coordination with bridal makeup for total aesthetic harmony"
+    ]
   }
 ];

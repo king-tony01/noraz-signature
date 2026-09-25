@@ -10,7 +10,7 @@ interface BookingFormProps {
 }
 
 export const BookingForm: React.FC<BookingFormProps> = ({
-  initialService = "The Royal Bridal Suite",
+  initialService = "Bridal Makeup",
   initialNotes = "",
 }) => {
   const [formData, setFormData] = useState({
@@ -327,11 +327,15 @@ Looking forward to hearing from you!`;
                       outline: "none",
                     }}
                   >
-                    <option value="The Royal Bridal Suite">The Royal Bridal Suite ($650)</option>
-                    <option value="Traditional & Cultural Elegance">Traditional & Cultural Elegance ($550)</option>
-                    <option value="Signature Red Carpet & Gala">Signature Red Carpet & Gala ($220)</option>
-                    <option value="Editorial & High-Fashion Campaign">Editorial & High-Fashion Campaign ($850)</option>
-                    <option value="1-on-1 VIP Artistry Masterclass">1-on-1 VIP Artistry Masterclass ($450)</option>
+                    <option value="Bridal Makeup">Bridal Makeup (Signature Look)</option>
+                    <option value="Traditional Bridal Makeup">Traditional Bridal Makeup</option>
+                    <option value="Signature Glam">Signature Glam</option>
+                    <option value="Gele Styling">Gele Styling</option>
+                    <option value="Bridal Party Makeup">Bridal Party Makeup</option>
+                    <option value="Photoshoot & Editorial Makeup">Photoshoot & Editorial Makeup</option>
+                    <option value="Home Service">Home Service (On-Location)</option>
+                    <option value="Makeup Lessons">Makeup Lessons (1-on-1 Session)</option>
+                    <option value="Group & Event Bookings">Group & Event Bookings</option>
                   </select>
                 </div>
 

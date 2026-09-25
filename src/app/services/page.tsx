@@ -47,7 +47,7 @@ export const metadata: Metadata = {
 const servicesSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Bespoke Bridal & Editorial Makeup Artistry",
+  name: "Noraz Signature Refined Beauty & Bridal Services",
   provider: {
     "@type": "BeautySalon",
     name: "Noraz Signature",
@@ -58,30 +58,78 @@ const servicesSchema = {
   areaServed: ["Lagos", "Nigeria", "United Kingdom", "Worldwide"],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Noraz Signature Artistry Packages",
+    name: "Noraz Signature Artistry Catalog",
     itemListElement: [
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "The Royal Bridal Experience",
-          description: "Complete luxury wedding day makeup with skin prep and VIP touch-up kit.",
+          name: "Signature Glam",
+          description: "Elegant, polished glam designed for special occasions, celebrations and unforgettable moments.",
         },
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Traditional Regal African Wedding",
-          description: "Vibrant pigmentation, gele styling alignment, and waterproof endurance.",
+          name: "Bridal Makeup",
+          description: "Flawless, long-lasting bridal glam carefully tailored to your features and wedding aesthetic.",
         },
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Red Carpet & Gala Evening Glam",
-          description: "Sculpted bone structure and red carpet lighting camera-ready finish.",
+          name: "Traditional Bridal Makeup",
+          description: "Timeless bridal beauty designed to complement your traditional attire, accessories and gele.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Gele Styling",
+          description: "Beautifully structured gele styling created to complete your overall look.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Bridal Party Makeup",
+          description: "Coordinated and elegant glam for bridesmaids, mothers and members of the bridal party.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Photoshoot & Editorial Makeup",
+          description: "Camera-ready beauty tailored to your creative concept, photoshoot or editorial project.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Home Service",
+          description: "A personalised beauty experience delivered at your preferred location.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Makeup Lessons",
+          description: "Personalised one-on-one sessions designed to help you master your makeup routine and techniques.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Group & Event Bookings",
+          description: "Customised beauty services for weddings, celebrations, events and group occasions.",
         },
       },
     ],
@@ -92,25 +140,25 @@ export default function ServicesPage() {
   const bridalPartyRates = [
     {
       role: "Maid of Honor Glam",
-      price: "$160",
+      price: "Inquire",
       description: "Full complexion tailoring, signature soft glam eyes, premium lashes, and setting spray lock.",
       duration: "50 mins",
     },
     {
       role: "Bridesmaids Artistry (Per Person)",
-      price: "$140",
+      price: "Inquire",
       description: "Cohesive bridal aesthetic matching the wedding palette, waterproof finish, and lip touch-up vial.",
       duration: "45 mins",
     },
     {
       role: "Mother of the Bride / Groom",
-      price: "$150",
+      price: "Inquire",
       description: "Age-defying hydration stacking, fine-line smoothing, soft satin finish, and lifting eye contour.",
       duration: "50 mins",
     },
     {
       role: "Groom Complexion Polish & Grooming",
-      price: "$95",
+      price: "Inquire",
       description: "Anti-shine matte finish, undetectable skin tone balance, brow groom, and beard conditioning.",
       duration: "30 mins",
     },
@@ -119,22 +167,22 @@ export default function ServicesPage() {
   const luxuryAddons = [
     {
       title: "Deluxe Hydra-Facial Pre-Glam Primer",
-      price: "$65",
+      price: "Add-on",
       detail: "Micro-exfoliation & Hyaluronic Acid moisture infuse for glass-skin application.",
     },
     {
       title: "Full Day VIP Touch-Up Concierge",
-      price: "$300",
+      price: "Add-on",
       detail: "Artist remains on-site through reception, second look change, and evening dance party.",
     },
     {
       title: "Pre-Wedding Engagement / Court Shoot",
-      price: "$200",
+      price: "Add-on",
       detail: "Camera-ready soft glow for pre-wedding portrait sessions and courthouse ceremonies.",
     },
     {
       title: "Bespoke Mink Lash Architecture",
-      price: "$45",
+      price: "Add-on",
       detail: "Hand-mapped individual lash clusters customized to your eye shape.",
     },
   ];
@@ -148,9 +196,9 @@ export default function ServicesPage() {
       <Navbar />
 
       <PageHeader
-        badge="Haute Artistry Catalog"
-        title="Bespoke Packages & Bridal Suites"
-        description="Every package is curated with skin-first philosophy, premium cosmetics, and complete timeline punctuality."
+        badge="Our Services"
+        title="Refined Beauty & Bespoke Styling"
+        description="At Noraz Signature, we create refined beauty experiences tailored to your style, occasion and individuality. From signature glam to bridal beauty, every detail is thoughtfully curated for a flawless finish."
         breadcrumb="Services"
       />
 

@@ -8,17 +8,17 @@ interface BookingCalculatorProps {
 }
 
 export const BookingCalculator: React.FC<BookingCalculatorProps> = ({ onApplyToBooking }) => {
-  const [selectedService, setSelectedService] = useState<string>("bridal-couture");
+  const [selectedService, setSelectedService] = useState<string>("bridal-makeup");
   const [bridalPartyCount, setBridalPartyCount] = useState<number>(3);
   const [selectedAddons, setSelectedAddons] = useState<string[]>(["extended-touchup"]);
   const [travelType, setTravelType] = useState<"studio" | "metro" | "destination">("metro");
 
   const services = [
-    { id: "bridal-couture", name: "The Royal Bridal Suite", basePrice: 650, label: "Bride + Pre-Wedding Trial ($650)" },
-    { id: "traditional-splendor", name: "Traditional & Cultural Elegance", basePrice: 550, label: "Cultural Bridal Artistry ($550)" },
-    { id: "red-carpet-glam", name: "Signature Red Carpet & Gala", basePrice: 220, label: "Single Occasion Glam ($220)" },
-    { id: "editorial-commercial", name: "Editorial & Campaign", basePrice: 850, label: "Half-Day Production ($850)" },
-    { id: "masterclass-pro", name: "1-on-1 VIP Artistry Masterclass", basePrice: 450, label: "Private 4.5h Intensive ($450)" },
+    { id: "bridal-makeup", name: "Bridal Makeup", basePrice: 650, label: "Bridal Makeup (Signature Look) ($650)" },
+    { id: "traditional-bridal", name: "Traditional Bridal Makeup", basePrice: 550, label: "Traditional Bridal Makeup ($550)" },
+    { id: "signature-glam", name: "Signature Glam", basePrice: 220, label: "Signature Glam (Special Occasion) ($220)" },
+    { id: "photoshoot-editorial", name: "Photoshoot & Editorial Makeup", basePrice: 850, label: "Photoshoot & Editorial Production ($850)" },
+    { id: "makeup-lessons", name: "Makeup Lessons", basePrice: 450, label: "Makeup Lessons (1-on-1 Session) ($450)" },
   ];
 
   const addonsList = [
